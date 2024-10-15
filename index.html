@@ -15,27 +15,68 @@
     <div class="container">
       <nav class="section menu">
         <ul class="menu-list">
-          <li class="menu-item">Shop For</li>
-          <li class="menu-item">Clothing</li>
-          <li class="menu-item">Accessories</li>
+          <li>
+            <ul class="menu-item">
+              Shop For
+              <div class="sub-item-group">
+                <li class="sub-menu-item">Converse</li>
+                <li class="sub-menu-item">Adidas</li>
+                <li class="sub-menu-item">Nike</li>
+              </div>
+            </ul>
+          </li>
+          <li>
+            <ul class="menu-item">
+              Clothing
+              <div class="sub-item-group">
+                <li class="sub-menu-item">Jersey</li>
+                <li class="sub-menu-item">Tank Tops</li>
+                <li class="sub-menu-item">Beaters</li>
+              </div>
+            </ul>
+          </li>
+          <li>
+            <ul class="menu-item">
+              Accessories
+              <div class="sub-item-group"></div>
+            </ul>
+          </li>
         </ul>
       </nav>
-      <article class="section article">
-        <div class="circle">
-          <i class="fa-solid fa-arrow-left"></i>
-        </div>
-        <div class="circle">
-          <i class="fa-solid fa-arrow-right"></i>
-        </div>
-        <div class="carousel-container">
-          <div class="image active">
-            <img src="img/emma-claire-GZlqkMAFsfI-unsplash.jpg" alt="" />
-          </div>
-          <div class="image">
-            <img src="img/felipe-galvan-NAXwZWYVJPQ-unsplash.jpg" alt="" />
-          </div>
-          <div class="image">
-            <img src="img/nitish-meena-1mFSRB6SBQw-unsplash.jpg" alt="" />
+      <article class="section carousel">
+        <div class="slider-wrapper">
+          <div class="slider">
+            <div class="slider-btns">
+              <a class="img-link" href="">
+                <i class="slider-btn fa-solid fa-arrow-left"></i>
+              </a>
+              <a class="img-link" href="">
+                <i class="slider-btn fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+            <img
+              id="slide-1"
+              class="image active"
+              src="img/emma-claire-GZlqkMAFsfI-unsplash.jpg"
+              alt=""
+            />
+            <img
+              id="slide-2"
+              class="image"
+              src="img/felipe-galvan-NAXwZWYVJPQ-unsplash.jpg"
+              alt=""
+            />
+            <img
+              id="slide-3"
+              class="image"
+              src="img/nitish-meena-1mFSRB6SBQw-unsplash.jpg"
+              alt=""
+            />
+            <div class="slider-nav">
+              <a href="#slider-1"></a>
+              <a href="#slider-2"></a>
+              <a href="#slider-3"></a>
+            </div>
           </div>
         </div>
       </article>

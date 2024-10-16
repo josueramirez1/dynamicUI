@@ -1,14 +1,47 @@
+// dropdownmenu
+
 document.addEventListener("mouseover", (e) => {
-  if (!e.target.matches(".menu-item")) return;
-  const group = e.target.children[0];
-  group.style.display = "block";
+  const subMenuList = [...document.querySelectorAll(".sub-menu-list")];
+  if (
+    e.target.matches(".sub-menu-title") ||
+    e.target.matches(".sub-menu-list") ||
+    e.target.matches(".sub-menu-item")
+  ) {
+    const subGroup = e.target.closest(".menu-item").children[1];
+    displayBlock(subGroup);
+  } else {
+    removeBlock(subMenuList);
+  }
 });
 
-document.addEventListener("mouseout", (e) => {
-  if (!e.target.matches(".menu-item")) return;
-  const group = e.target.children[0];
-  group.style.display = "none";
-});
+function displayBlock(element) {
+  element.style.display = "block";
+}
+
+function removeBlock(element) {
+  element.forEach((elem) => {
+    elem.style.display = "none";
+  });
+}
+
+// carousel
+
+function timeout() {
+  let pictureImages = [...document.querySelectorAll(".image")];
+  let activeImage = pictureImages.find((active) => {
+    return active.matches(".active");
+  });
+  pictureImages.forEach((picture) => {
+    if (picture.matches(".active") === activeImage.matches(".active")) {
+      setTimeout(() => {
+        picture.classList.remove("active");
+        picture.nextElementSibling.classList.add("active");
+      }, 5000);
+    }
+  });
+}
+
+timeout();
 
 document.addEventListener("click", (e) => {
   let pictureImages = [...document.querySelectorAll("img")];
